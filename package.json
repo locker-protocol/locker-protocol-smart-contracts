@@ -1,0 +1,47 @@
+{
+  "name": "locker-smart-contracts",
+  "version": "1.0.0",
+  "description": "Locker Protocol — Ultra-secure ERC-20 token locking with multi-signature, air-gapped signing, and on-chain price conditions",
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "compile:force": "hardhat compile --force",
+    "clean": "hardhat clean",
+    "test": "cd test && ./run_tests.sh",
+    "deploy:local": "hardhat run scripts/deploy-local.js --network localhost",
+    "deploy": "hardhat run scripts/deploy.js --network",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "solidity",
+    "smart-contracts",
+    "erc20",
+    "token-locking",
+    "multi-sig",
+    "eip-712",
+    "defi",
+    "vesting",
+    "uniswap",
+    "hardhat",
+    "ethereum",
+    "locker-protocol"
+  ],
+  "author": "Locker Protocol",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lockerprotocol/locker-smart-contracts.git"
+  },
+  "engines": {
+    "node": ">=20.0.0 <25.0.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "ethers": "^6.13.4",
+    "hardhat": "^2.22.16"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0",
+    "dotenv": "^16.4.5"
+  }
+}

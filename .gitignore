@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+
+# Build outputs
+artifacts/
+cache/
+build/
+dist/
+*.sol.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Solidity
+*.sol.js.map
+
+# Hardhat
+.openzeppelin/
+typechain/
+typechain-types/
+
+# Deployment outputs
+deployed-addresses*.json
+
+# Test state
+test/.shared-state.json
+test/.test-results.json
+test/test-report.md
+test/core/.shared-state.json
+test/core/.test-results.json
+
+# OS
+.DS_Store
+Thumbs.db

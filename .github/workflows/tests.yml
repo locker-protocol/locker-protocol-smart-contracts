@@ -1,0 +1,38 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Smart Contract Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install test dependencies
+        working-directory: test
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Publish test report
+        if: always()
+        run: |
+          if [ -f test/test-report.md ]; then
+            cat test/test-report.md >> $GITHUB_STEP_SUMMARY
+          fi
